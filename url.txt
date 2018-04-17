@@ -1,0 +1,38 @@
+        var pageSize = 15;//默认每页15条记录
+        var param = {
+            pageNum:pageIndex,//当前页号
+            numPerPage:pageSize,//每页条数
+            contentType:newsTab.contentType
+        }
+        $.ajax({
+            url:ctx+'/fornt/news/pageNews',
+            data:param,
+            type:'POST',
+            dataType:'JSON',
+            success:function (data) {
+                $("#list_news").empty();
+                $('#list_news').html(template('list-tmpl', data));
+                news.initPage(data.total, pageIndex, pageSize);
+            }
+        })
+
+http://in.iflytek.com/fornt/news/pageNews?pageNum=1&numPerPage=10&contentType=0
+
+        var param = {
+            pageNum:1,//当前页号
+            numPerPage:10//每页条数
+        }
+        $.ajax({
+            url:ctx+'/fornt/news/topNews',
+            data:param,
+            type:'POST',
+            dataType:'JSON',
+            success:function (data) {
+                $("#top_news").empty();
+                $('#top_news').html(template('top-tmpl', data));
+            }
+        })
+
+http://in.iflytek.com/fornt/news/topNews?pageNum=1&numPerPage=10
+
+http://in.iflytek.com/fornt/getPersonalInfo
