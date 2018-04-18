@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mt-header title="首页" fixed v-if="!search">
+    <mt-header title="首页" fixed v-if="head && !search">
       <i class="iconfont icon-sousuo" slot="left" @click="showSearch"></i>
       <i class="iconfont icon-icon--" slot="right" @click="showTonzhi"></i>
     </mt-header>
@@ -26,6 +26,7 @@
     data() {
       return {
         search: false,
+        head:true,
         value: '',
         defaultResult: [
           'Apple',
@@ -48,7 +49,7 @@
       }
     },
     methods: {
-      showTonzhi() {   
+      showTonzhi() {
         //跳转到通知页面，query不会缓存type,params会缓存参数type
         this.$router.push({
           path: '/news',
@@ -83,6 +84,18 @@
     computed: {
       filterResult() {
         return this.defaultResult.filter(value => new RegExp(this.value, 'i').test(value));
+      }
+    },
+    watch: {
+      $route() {
+        // console.log(this.$route.path)
+        let path = this.$route.path
+        if (path == '/user' || path == '/news') {
+          this.head = false
+        }else{
+          this.head = true
+        }
+
       }
     },
     directives: {

@@ -15,7 +15,5 @@ export default {
 </script>
 
 <style scoped>
-  #user {
-    margin-top: 45px;
-  }
+
 </style>
