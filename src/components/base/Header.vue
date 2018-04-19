@@ -23,6 +23,7 @@
     Cell,
   } from 'mint-ui';
   export default {
+    name:'headerComponent',
     data() {
       return {
         search: false,
