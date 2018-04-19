@@ -21,7 +21,7 @@ npm run build --report
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ---
-##资料
+## 资料
 * 阿里巴巴矢量图标库 http://www.iconfont.cn/
 * Mint UI 使用文档 http://mint-ui.github.io/docs/#/zh-cn2
 * Vue.js 官方文档 https://cn.vuejs.org/v2/guide/
