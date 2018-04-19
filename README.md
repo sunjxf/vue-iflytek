@@ -152,7 +152,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
     </style>
 ```
 
-* <router-view/>中的组件访问父组件中子组件的变量
+* router-view中的组件访问父组件中子组件的变量
 ```html
     <template>
     <div id="app">
@@ -216,13 +216,13 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
     </template>
 ```
 ```javascript
-        //调用mt-datetime-picker组件
-        offWorkTimeFn() {
+    //调用mt-datetime-picker组件
+    offWorkTimeFn() {
         this.$refs.offWorkTimeRef.open()
         this.oldValue = this.offWorkTime
-        },
-        //mt-datetime-picker组件中的取消按钮的事件
-        offWorkTimeCancel() {
+    },
+    //mt-datetime-picker组件中的取消按钮的事件
+    offWorkTimeCancel() {
         this.offWorkTime = this.oldValue
-        },
+    },
 ```
