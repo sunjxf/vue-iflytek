@@ -29,7 +29,8 @@
       <div id="bar"> </div>
       <mt-cell>
         <div slot="title" class="tipTitle">打卡提醒</div>
-        <mt-switch v-model="daka" @click.native="toast(daka?'开':'关')"></mt-switch>
+        <!-- 不懂为啥是反的。o(╥﹏╥)o -->
+        <mt-switch v-model="daka" @click.native="toast(daka?'关':'开')"></mt-switch>
       </mt-cell>
       <div id="line"> </div>
       <mt-cell @click.native="workTimeFn">
@@ -44,7 +45,7 @@
       <div id="bar"> </div>
       <mt-cell>
         <div slot="title" class="tipTitle">考勤维护提醒</div>
-        <mt-switch v-model="weihu" @click.native="toast(weihu?'开':'关')"></mt-switch>
+        <mt-switch v-model="weihu" @click.native="toast(weihu?'关':'开')"></mt-switch>
       </mt-cell>
       <div id="line"> </div>
       <mt-cell @click.native="tipTimeFn">
