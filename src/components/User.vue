@@ -34,6 +34,7 @@
       <mt-cell>
         <div slot="title" class="title"> 上班打卡提醒时间</div>
       <span class="rightTitle"> 08:20</span></mt-cell>
+       <div id="line"> </div>
       <mt-cell>
         <div slot="title" class="title"> 下班打卡提醒时间</div>
         <span class="rightTitle"> 17:30</span> </mt-cell>
@@ -50,6 +51,7 @@
       <mt-cell is-link>
           <div slot="title" class="title">各分子公司开票信息</div>
       </mt-cell>
+       <div id="line"> </div>
       <mt-cell is-link>
          <div slot="title" class="title">设置</div>
       </mt-cell>
@@ -83,10 +85,13 @@
         });
       }
     },
+    created () {
+      console.log(this);
+      
+    }
   }
 
 </script>
-
 <style scoped>
   .iconfont {
     font-size: 22px;
@@ -137,4 +142,11 @@
   .rightTitle{
      font-size: 14px;
   }
+</style>
+
+<style>
+/*去除wrapper顶部的1px横线 */
+.mint-cell-wrapper{
+  background-image:none;
+}
 </style>
