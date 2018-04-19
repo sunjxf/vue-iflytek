@@ -221,7 +221,13 @@
 
 <style>
   /*去除wrapper顶部的1px横线 */
+
   .mint-cell-wrapper {
     background-image: none;
   }
+
+  .picker .picker-toolbar {
+    border-bottom: 1px solid #eaeaea;
+  }
+
 </style>
